@@ -1,0 +1,4 @@
+"is even!" is sometimes not printed because the || (or) operator only checks
+the first case. If the first case is true, it doesn't evaluate the second. It
+will only evaluate the second case if the operator is && (and) or if the first
+case is false.

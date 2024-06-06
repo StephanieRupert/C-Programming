@@ -1,0 +1,1 @@
+"in even!" isn't always printed because some statements are "or" statements. So only one has to be true for the statement to be true. If it's true (1), "in odd!" is printed. If it's false (0) "in even!" is printed.

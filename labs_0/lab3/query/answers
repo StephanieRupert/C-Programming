@@ -1,0 +1,21 @@
+1) What does -Werror and -Wextra do when used with gcc?
+- Werror: Turns all warnings you would normally see when using just -Wall into errors.
+- Wextra: Enables some other warnings that are not enabled by -Wall alone.
+
+https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html
+
+2) What does the error "Undefined reference to 'x'" mean?
+The header file for x has not been included.
+
+http://www.cs.swarthmore.edu/~newhall/unixhelp/debuggingtips_C++.html
+
+3) Why does strlen return size_t?
+If strlen returns size_t for the value of a string's length, one should use "%zu" instead of "%d"
+
+http://stackoverflow.com/questions/5716774/strlen-to-return-size-t
+(This answer is toward the bottom)
+
+4) What is the largest integer type in c?
+unsigned long long
+
+http://www.informit.com/articles/article.aspx?p=350919&seqNum=4
