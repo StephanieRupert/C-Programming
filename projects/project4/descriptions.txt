@@ -1,0 +1,182 @@
+name starting_location
+    longer
+        "You're at the entrance of a cave. Your goal is to get through to the 
+        other side. You can only move west, south, and east."
+    shorter
+        "Entrance. You can move west, south, and east."
+    west room_6 
+    south room_8
+    east room_5
+    logic starting_location 
+    ;
+
+name room_5 
+    longer
+        "This room has no distinct features. It will be easy to get lost. You
+        can move east to another room or back the way you came (west)."
+    shorter
+        "You can move east or west."
+    west starting_location
+    east room_4
+    logic room_5 
+    ;
+
+name room_4 
+    longer
+        "This room has no distinct features. It will be easy to get lost. You
+        can move east to another room or back the way you came (west)."
+    shorter
+        "You can move east or west."
+    west room_5 
+    east room_3
+    logic room_4 
+    ;
+
+name room_3 
+    longer
+        "This room has no distinct features. It will be easy to get lost. You
+        can move north to another room or back the way you came (west)."
+    shorter
+        "You can move north or west."
+    west room_4 
+    north room_2
+    logic room_3 
+    ;
+
+name room_2 
+    longer
+        "This room has no distinct features. It will be easy to get lost. You
+        can move north to another room or back the way you came (south)."
+    shorter
+        "You can move north or south."
+    north room_1
+    south room_3
+    logic room_2 
+    ;
+
+name room_1 
+    longer
+        "It's a dead end. You can only go back the way you came (south)."
+    shorter
+        "Dead end. Go back south."
+    south room_2
+    logic room_1 
+    ;
+
+name room_6 
+    longer
+        "This room has no distinct features. It will be easy to get lost. You
+        can move west to another room or back the way you came (east)."
+    shorter
+        "You can move west or east."
+    east starting_location
+    west room_7
+    logic room_6 
+    ;
+
+name room_7 
+    longer
+        "It's a dead end. You can only go back the way you came (south)."
+    shorter
+        "Dead end. Go back east."
+    east room_6
+    logic room_7 
+    ;
+
+name room_8 
+    longer
+        "This room has no distinct features. It will be easy to get lost. You
+        can move south to another room or back the way you came (north)."
+    shorter
+        "You can move south or north."
+    north starting_location
+    south room_9
+    logic room_8 
+    ;
+
+name room_9 
+    longer
+        "This room has no distinct features. It will be easy to get lost. You
+        can move east to another room, south to another room, or back the way 
+        you came (north)."
+    shorter
+        "You can move east, south, or north."
+    east room_10 
+    south room_12
+    north room_8
+    logic room_9 
+    ;
+
+name room_10 
+    longer
+        "This room has no distinct features. It will be easy to get lost. You
+        can move east to another room or back the way you came (west)."
+    shorter
+        "You can move east or west."
+    west room_9 
+    east room_11
+    logic room_10 
+    ;
+
+name room_11 
+    longer
+        "It's a dead end. You can only go back the way you came (west)."
+    shorter
+        "Dead end. Go back west."
+    west room_10 
+    logic room_11 
+    ;
+
+name room_12 
+    longer
+        "This room has no distinct features. It will be easy to get lost. You
+        can move west to another room, south to another room, or back the way
+        you came (north)."
+    shorter
+        "You can move west, south, or north."
+    west room_15
+    south room_13
+    north room_9
+    logic room_12 
+    ;
+
+name room_13 
+    longer
+        "This room has no distinct features. It will be easy to get lost. You
+        can move south to another room or back the way you came (north)."
+    shorter
+        "You can move south or north"
+    south room_14
+    north room_12
+    logic room_13 
+    ;
+
+name room_14 
+    longer
+        "It's a dead end. You can only go back the way you came (north)."
+    shorter
+        "Dead end. Go back north."
+    north room_13
+    logic room_14 
+    ;
+
+name room_15 
+    longer
+        "It's a little bit brighter in this room. You can see the exit. You
+        can move west to the exit or back the way you came (east)."
+    shorter
+        "The exit. You can move west or east."
+    west exit
+    east room_12
+    logic room_15 
+    ;
+
+name exit 
+    longer
+        "You have made it out of the cave!" 
+    shorter
+        "Done!"
+    east room_15 
+    logic room_exit
+    ;
+
